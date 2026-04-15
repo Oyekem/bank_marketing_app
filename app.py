@@ -201,7 +201,7 @@ elif page == "Data Visualization":
 
 
     # LOAD DATA (SAFE + CLEANED)
-    file_path = r"cleaned_bank_data.csv"
+    df = pd.read_csv("cleaned_bank_data.csv")
 
     try:
         df = pd.read_csv(file_path)
@@ -209,9 +209,7 @@ elif page == "Data Visualization":
 
     except Exception as e:
         st.error("❌ Failed to load cleaned dataset, using fallback raw data")
-        df = pd.read_csv(
-            r"C:\Users\Tawakalt.Oyeleso\Desktop\Tawakalt Docs\Projects\2026\bank_marketing\bank_marketing_prediction\data\bank-full.csv"
-        )
+        df = pd.read_csv("bank-full.csv")
 
     # CLEAN COLUMN NAMES
     df.columns = df.columns.str.strip()
