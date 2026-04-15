@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 
 # LOAD MODEL
-model = joblib.load ("C:/Users/Tawakalt.Oyeleso/Desktop/Tawakalt Docs/Projects/2026/bank_marketing/Bank Marketing Prediction/xgboost_bank_pipeline.pkl")
+model = joblib.load ("xgboost_bank_pipeline.pkl")
 
 # FEATURE FLAGS (GLOBAL CONTROL)
 if "features" not in st.session_state:
@@ -201,7 +201,7 @@ elif page == "Data Visualization":
 
 
     # LOAD DATA (SAFE + CLEANED)
-    file_path = r"C:\Users\Tawakalt.Oyeleso\Desktop\Tawakalt Docs\Projects\2026\bank_marketing\bank_marketing_analysis\cleaned_bank_data.csv"
+    file_path = r"cleaned_bank_data.csv"
 
     try:
         df = pd.read_csv(file_path)
