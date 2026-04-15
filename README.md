@@ -59,7 +59,7 @@ Bank Marketing Prediction/
 1. Clone the repository:
 
 ```
-git clone https://github.com/yourusername/bank-marketing-app.git
+git clone https://github.com/Oyekem/bank-marketing-app.git
 cd bank-marketing-app
 ```
 
