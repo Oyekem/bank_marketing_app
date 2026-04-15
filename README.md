@@ -106,6 +106,6 @@ This app can be deployed using:
 
 ## 👤 Author
 
-Your Name
-GitHub: https://github.com/yourusername
+Oyekemi Tawakalt
+GitHub: [https://github.com/yourusername](https://github.com/Oyekem/bank_marketing_app)
 
