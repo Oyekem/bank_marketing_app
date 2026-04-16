@@ -7,10 +7,6 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 
-import joblib
-
-joblib.dump(model, "xgboost_bank_pipeline.pkl")
-
 # LOAD MODEL
 model = joblib.load ("xgboost_bank_pipeline.pkl")
 
