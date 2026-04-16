@@ -9,11 +9,11 @@
 - [Machine Learning Model](#-machine-learning-model)
 - [Tech Stack](#-tech-stack)
 - [Project Structure](#-project-structure)
-- ⚙️ [Installation & Setup](#-installation--setup)
-- ▶️ [Run the Application](#-run-the-application)
-- 🎯 [Objective](#-objective)
-- 🌍 [Deployment](#-deployment)
-- 👤 [Author](#-author)
+- [Installation & Setup](#-installation--setup)
+- [Run the Application](#-run-the-application)
+- [Objective](#-objective)
+- [Deployment](#-deployment)
+- [Author](#-author)
 
 
 
@@ -96,7 +96,7 @@ pip install -r requirements.txt
 
 ---
 
-## ▶️ Run the Application
+## Run the Application
 
 ```
 streamlit run app.py
@@ -106,13 +106,13 @@ Then open the local URL shown in your browser.
 
 ---
 
-## 🎯 Objective
+## Objective
 
 To help financial institutions identify potential customers who are more likely to subscribe to term deposits, improving marketing efficiency and reducing costs.
 
 ---
 
-## 🌍 Deployment
+## Deployment
 
 This app can be deployed using:
 
@@ -122,7 +122,7 @@ This app can be deployed using:
 
 ---
 
-## 👤 Author
+## Author
 
 Oyekemi Tawakalt
 
