@@ -201,24 +201,37 @@ elif page == "Data Visualization":
 
 
     # LOAD DATA (SAFE + CLEANED)
-    df = pd.read_csv("cleaned_bank_data.csv")
-
     try:
-        df = pd.read_csv("cleaned_bank_data.csv")
-        st.success("✅ Cleaned dataset loaded successfully")
-
-    except Exception as e:
-        st.error("❌ Failed to load cleaned dataset, using fallback raw data")
-        df = pd.read_csv("bank-full.csv")
+      df = pd.read_csv("cleaned_bank_data.csv")
+      st.success("✅ Cleaned dataset loaded successfully")
+    except:
+      st.error("❌ Failed to load cleaned dataset, using fallback raw data")
+      df = pd.read_csv("bank-full.csv")
 
     # CLEAN COLUMN NAMES
     df.columns = df.columns.str.strip()
 
     st.write("### Dataset Preview")
-    st.dataframe(df.head(20))
 
-    st.write("COLUMNS:", df.columns)
-    st.write("DTYPES:", df.dtypes)
+    df_display = df.copy()
+
+    # 🔥 FIX STREAMLIT / PYARROW ISSUE
+    df_display = df_display.convert_dtypes()
+
+    for col in df_display.columns:
+      if df_display[col].dtype == "object":
+          try:
+              df_display[col] = pd.to_numeric(df_display[col])
+          except:
+              df_display[col] = df_display[col].astype(str)
+
+    st.dataframe(df_display.head(20))
+
+    st.write("### Columns")
+    st.write(df.columns)
+
+    st.write("### Data Types")
+    st.write(df.dtypes)
 
 
     # FILTER SYSTEM (POWER BI STYLE)
@@ -298,11 +311,18 @@ elif page == "Data Visualization":
     st.subheader("🔥 Correlation Heatmap")
 
     df_clean = df.copy()
+    df_clean = df_clean.convert_dtypes()
 
-    for col in df_clean.select_dtypes(include=["object"]).columns:
-      df_clean[col] = pd.to_numeric(df_clean[col], errors="coerce")
+    for col in df_clean.columns:
+      if df_clean[col].dtype == "object":
+          try:
+              df_clean[col] = pd.to_numeric(df_clean[col])
+          except:
+              df_clean[col] = df_clean[col].astype(str)
 
     numeric_df = df_clean.select_dtypes(include=["number"])
+    corr = numeric_df.corr()
+    
     if numeric_df.shape[1] > 1:
 
         corr = numeric_df.corr()
