@@ -1,10 +1,10 @@
-streamlit
-pandas
-numpy<2
-scikit-learn>=1.4
-xgboost
-joblib
 matplotlib
 seaborn
 plotly
-imbalanced-learn
+streamlit
+pandas
+numpy==1.26.4
+scikit-learn==1.7.2
+xgboost==1.7.6
+imbalanced-learn==0.10.1
+joblib
