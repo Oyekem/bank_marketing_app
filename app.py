@@ -204,7 +204,7 @@ elif page == "Data Visualization":
     df = pd.read_csv("cleaned_bank_data.csv")
 
     try:
-        df = pd.read_csv(file_path)
+        df = pd.read_csv("cleaned_bank_data.csv")
         st.success("✅ Cleaned dataset loaded successfully")
 
     except Exception as e:
