@@ -2,8 +2,8 @@ streamlit
 pandas
 numpy
 scikit-learn
-xgboost==1.7.6
 joblib
 matplotlib
 seaborn
 plotly
+xgboost==1.7.6
