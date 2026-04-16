@@ -299,8 +299,8 @@ elif page == "Data Visualization":
 
     df_clean = df.copy()
 
-    for col in df_clean.columns:
-        df_clean[col] = pd.to_numeric(df_clean[col], errors="ignore")
+    for col in df_clean.select_dtypes(include=["object"]).columns:
+        df_clean[col] = pd.to_numeric(df_clean[col], errors="coerce")
 
     numeric_df = df_clean.select_dtypes(include=["int64", "float64"])
 
