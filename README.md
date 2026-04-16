@@ -1,5 +1,23 @@
 # Bank Marketing Prediction App
 
+
+## Table of Contents
+[Prediction App: Bank Marketing Dataset](#-prediction-app-marketing-dataset)
+- [Table of Contents](#-table-of-contents)
+- [Overview](#-overview)
+- [Features](#-features)
+- [Machine Learning Model](#-machine-learning-model)
+- [Tech Stack](#-tech-stack)
+- [Project Structure](#-project-structure)
+- ⚙️ [Installation & Setup](#-installation--setup)
+- ▶️ [Run the Application](#-run-the-application)
+- 🎯 [Objective](#-objective)
+- 🌍 [Deployment](#-deployment)
+- 👤 [Author](#-author)
+
+
+
+
 ## Overview
 
 This project is a machine learning web application that predicts whether a customer will subscribe to a term deposit based on data from bank marketing campaigns.
@@ -30,7 +48,7 @@ It leverages an **XGBoost model** integrated into a pipeline and provides real-t
 
 
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * Python
 * Pandas
@@ -42,7 +60,7 @@ It leverages an **XGBoost model** integrated into a pipeline and provides real-t
 
 
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 Bank Marketing Prediction/
@@ -108,5 +126,5 @@ This app can be deployed using:
 
 Oyekemi Tawakalt
 
-GitHub: [https://github.com/yourusername](https://github.com/Oyekem/bank_marketing_app)
+GitHub: [https://github.com/Oyekem](https://github.com/Oyekem/bank_marketing_app)
 
