@@ -1,7 +1,7 @@
 streamlit
 pandas
 numpy<2
-scikit-learn==1.5.2
+scikit-learn>=1.4
 xgboost
 joblib
 matplotlib
