@@ -298,10 +298,12 @@ elif page == "Data Visualization":
     st.subheader("🔥 Correlation Heatmap")
 
     df_clean = df.copy()
-    
-    # keep only numeric columns for correlation
-    numeric_df = df_clean.select_dtypes(include=["number"])
 
+    # convert only object columns
+    for col in df_clean.select_dtypes(include=["object"]).columns:
+      df_clean[col] = pd.to_numeric(df_clean[col], errors="coerce")
+
+    numeric_df = df_clean.select_dtypes(include=["number"])
     if numeric_df.shape[1] > 1:
 
         corr = numeric_df.corr()
