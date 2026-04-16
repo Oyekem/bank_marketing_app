@@ -225,7 +225,7 @@ elif page == "Data Visualization":
           except:
               df_display[col] = df_display[col].astype(str)
 
-    st.dataframe(df_display.head(20))
+    st.dataframe(df_display.head(20).astype(str))
 
     st.write("### Columns")
     st.write(df.columns)
